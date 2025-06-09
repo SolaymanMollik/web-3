@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      header {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: auto;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #00cfff;
+      }
+
+      .mobile-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 80px;
+          right: 0;
+          background: #fff;
+          flex-direction: column;
+          width: 100%;
+          text-align: right;
+          padding: 1rem;
+          box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.1);
+          animation: slideIn 0.4s ease-in-out;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .mobile-toggle {
+          display: block;
+        }
+
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+          <span>NXT</span>
+        </div>
+        <nav class="nav-links" id="nav-links">
+          <a href="../../index.html" id="header-home">Home</a>
+          <a href="../html/careers.html" id="header-careers"
+            >Business with us</a
+          >
+          <a href="../html/about.html" id="header-about">About Us</a>
+          <a href="../html/careers.html" id="header-qrcampaign">QR Campaign</a>
+          <a href="../html/dealer.html" id="header-dealer">Dealer</a>
+          <a href="../html/contact.html" id="header-contact">Contact</a>
+        </nav>
+        <div class="mobile-toggle" id="mobile-toggle">&#9776;</div>
+      </div>
+    </header>
+    <script>
+      const toggleBtn = document.getElementById("mobile-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Optional: Scroll effect
+      let lastScroll = window.pageYOffset;
+
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        const header = document.getElementById("main-header");
+
+        if (currentScroll > lastScroll) {
+          header.style.top = "-100px";
+        } else {
+          header.style.top = "0";
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

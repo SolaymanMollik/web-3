@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Minifier</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    textarea { width: 100%; height: 200px; margin-bottom: 10px; font-family: monospace; }
+    button { padding: 10px 20px; margin-right: 10px; }
+    .output { white-space: pre-wrap; background: #fff; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <h2>HTML, CSS, JS Minifier & Detector</h2>
+
+  <textarea id="codeInput" placeholder="এখানে HTML, CSS, বা JS কোড দিন..."></textarea>
+  <br/>
+  <button onclick="detectLanguage()">ভাষা চিনুন</button>
+  <button onclick="minifyCode()">মিনিফাই করুন</button>
+
+  <h3>ভাষা:</h3>
+  <div id="langOutput" class="output"></div>
+
+  <h3>Minified কোড:</h3>
+  <div id="minifiedOutput" class="output"></div>
+
+  <script>
+    function detectLanguage() {
+      const code = document.getElementById('codeInput').value.trim();
+      let lang = 'Unknown';
+
+      if (code.includes('<html') || code.includes('<div') || code.includes('</')) {
+        lang = 'HTML';
+      } else if (code.includes('{') && code.includes('}') && (code.includes(':') || code.includes(';'))) {
+        lang = 'CSS';
+      } else if (code.includes('function') || code.includes('=>') || code.includes('console.log')) {
+        lang = 'JavaScript';
+      }
+
+      document.getElementById('langOutput').innerText = lang;
+    }
+
+    function minifyCode() {
+      let code = document.getElementById('codeInput').value;
+
+      // সাধারন whitespace সরানো, কিন্তু ট্যাগ বাদ না দেওয়া
+      code = code.replace(/\s{2,}/g, ' ')    // একাধিক space -> একটিতে
+                 .replace(/\n/g, '')         // সব লাইন ব্রেক সরানো
+                 .replace(/>\s+</g, '><');   // ট্যাগের মাঝের ফাঁকা অংশ সরানো
+
+      document.getElementById('minifiedOutput').innerText = code.trim();
+    }
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-if (window.localStorage.getItem("dev") !== "Y") {
+/* if (window.localStorage.getItem("dev") !== "Y") {
 
   document.getElementById(
     "the-loader"
@@ -18,4 +18,4 @@ window.addEventListener('load', () => load())
 
 
 //   setTimeout(load, 2000);
-}
+}*/ 

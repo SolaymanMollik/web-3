@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title data-i18n="title">Welcome</title>
+  </head>
+  <body>
+    <h1 data-i18n="greeting">Welcome</h1>
+    <p data-i18n="description">This is an English description.</p>
+    <button onclick="setLanguage('bn')">বাংলা</button>
+    <button onclick="setLanguage('en')">English</button>
+
+    <script>
+      const translations = {
+        bn: {
+          title: 'স্বাগতম',
+          greeting: 'স্বাগতম',
+          description: 'এটি একটি বাংলা বিবরণ।',
+        },
+        en: {
+          title: 'Welcome',
+          greeting: 'Welcome',
+          description: 'This is an English description.',
+        },
+      };
+
+      function setLanguage(lang) {
+        localStorage.setItem('lang', lang);
+        translatePage(lang);
+      }
+
+      function translatePage(lang) {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+      }
+
+      // প্রথমবার পেজ লোড হলে লোকালস্টোরেজ থেকে ভাষা লোড করা হবে
+      document.addEventListener('DOMContentLoaded', () => {
+        const lang = localStorage.getItem('lang') || 'en';
+        translatePage(lang);
+      });
+    </script>
+  </body>
+</html>

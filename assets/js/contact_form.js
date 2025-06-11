@@ -1,4 +1,4 @@
-let the_contact_div = document.getElementById("contact_sec_container");
+let the_contact_div = document.getElementById('contact_sec_container');
 
 the_contact_div.innerHTML = `
 
@@ -12,7 +12,7 @@ the_contact_div.innerHTML = `
   </section>
 
   <!-- Contact Form Section -->
-  <section class="bg-gray-900 py-10">
+  <section class="bg-gray-900 py-10" data-aos="fade-up-left">
     <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg p-8 shadow-lg">
       <form>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -38,15 +38,15 @@ the_contact_div.innerHTML = `
           <textarea rows="5" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring focus:ring-blue-500" placeholder="Leave a comment..."></textarea>
         </div>
         <p class="text-sm text-gray-400 mb-4">By submitting this form you agree to our <a href="#" class="text-blue-400 hover:underline">terms and conditions</a> and our <a href="#" class="text-blue-400 hover:underline">privacy policy</a>.</p>
-        <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium">Send message</button>
+        <button id="contact-submit-btn" type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium ">Send message</button>
       </form>
     </div>
   </section>
 
   <!-- Bottom Info Cards -->
   <section class="bg-gray-900 py-12">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center" >
+      <div data-aos="fade-left">
         <div class="text-3xl mb-2">📧</div>
         <h3 class="text-xl font-semibold mb-1 text-white">Email us:</h3>
         <p class="text-gray-400 text-sm mb-1">Email us for general queries, including marketing and partnership opportunities.</p>
@@ -58,7 +58,7 @@ the_contact_div.innerHTML = `
         <p class="text-gray-400 text-sm mb-1">Call us to speak to a member of our team. We are always happy to help.</p>
         <a href="tel:+16467865060" class="text-blue-400 hover:underline">+1 (646) 786-5060</a>
       </div>
-      <div>
+      <div data-aos="fade-right">
         <div class="text-3xl mb-2">🛠️</div>
         <h3 class="text-xl font-semibold mb-1 text-white">Support</h3>
         <p class="text-gray-400 text-sm mb-2">Email us for general queries, including marketing and partnership opportunities.</p>
@@ -67,4 +67,4 @@ the_contact_div.innerHTML = `
     </div>
   </section>
 
-`
+`;

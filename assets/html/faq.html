@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Glowing Slide-Up Animation</title>
+    <style>
+      body {
+        background: #0f0c29;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .animated-text {
+        font-size: 48px;
+        color: #00ffc8;
+        text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8;
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+        animation: slideUpGlow 1.8s ease-out forwards;
+      }
+
+      @keyframes slideUpGlow {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.9);
+          text-shadow: none;
+        }
+        50% {
+          opacity: 0.8;
+          transform: translateY(-10px) scale(1.05);
+          text-shadow: 0 0 15px #00ffc8;
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          text-shadow: 0 0 10px #00ffc8, 0 0 25px #00ffc8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animated-text">Welcome, Solayman!</div>
+  </body>
+</html>

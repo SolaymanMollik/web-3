@@ -1,14 +1,70 @@
 # web-3
 
-Welcome to the official website repository of **Close**, a professional bottled water brand designed to deliver pure refreshment in every drop. This site is designed to promote, inform, and connect with our users, dealers, and partners.
+# Fellow Packaged Drinking Water
+
+Welcome to **Fellow Water** – your trusted source of **pure, safe, and refreshing packaged drinking water in Bangladesh**.
+
+---
+
+## 💧 About Fellow Water
+
+**Fellow Bottled Water** is a premium brand offering **packaged drinking water** that meets the highest standards of **purity and hygiene**. Whether you're at home, at work, or on the go — **Fellow Pure Drinking Water** is always by your side to keep you hydrated and healthy.
+
+We are committed to ensuring every bottle of Fellow contains crystal-clear, **mineral-rich water** that’s been filtered and treated using the latest purification technologies.
+
+---
+
+## 🔍 Why Choose Fellow?
+
+- ✅ **100% Pure and Safe Drinking Water**
+- 🧊 **Advanced Filtration & UV Protection**
+- 🌱 **Eco-Friendly Bottles**
+- 🧪 Regular Lab Testing for Quality Assurance
+- 🇧🇩 Proudly Made in Bangladesh
+
+---
+
+## 🌍 Available Across Bangladesh
+
+Fellow is growing as a trusted name in **packaged water** throughout the country. Whether you search for:
+
+- `fellow Drinking Water Bangladesh`
+- `fellow Packaged Water Bangladesh`
+- `fellow Mineral Water Bangladesh`
+
+You’ll find Fellow bottles served in offices, events, restaurants, and homes.
+
+---
+
+## 📦 Our Products
+
+- 500 ml Bottle
+- 1 Liter Bottle
+- 2 Liter Bottle
+- 5 Gallon Jar
+
+---
+
+## 🤝 Partner with Us
+
+We welcome distributors, retailers, and corporate clients to join hands with **Fellow Water** and deliver health through hydration.
+
+📧 Email us: `contact@fellowwater.com`  
+📞 Call us: `+8801XXXXXXXXX`
+
+---
+
+## 📱 Stay Connected
+
+Follow us on social media for updates, offers, and water facts!
+
+> **Fellow Packaged Drinking Water** — _Pure from the source, trusted by millions._
 
 ---
 
 ## 🌐 Live Preview
 
-[🔗 Visit Website](https://yourusername.github.io/your-repo-name)
-
-> _(Replace this URL with your actual GitHub Pages URL)_
+[🔗 Visit Website](https://solaymanmollik.github.io/web-3)
 
 ---
 
@@ -51,3 +107,11 @@ To run the project locally:
 2. Open index.html in a browser
 
 ```
+
+# Fellow Packaged Drinking Water
+
+Welcome to **Fellow Water** – your trusted source of **pure, safe, and refreshing packaged drinking water in Bangladesh**.
+
+...
+
+> **Fellow Packaged Drinking Water** — _Pure from the source, trusted by millions._

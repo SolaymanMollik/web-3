@@ -47,10 +47,21 @@ header.innerHTML = `
 // // script
 
 const animation = (e) => {
-  if (e === 'b') {
+  // if (e === 't') {
+  //   header.classList.add('fixed');
+  //   header.style.top = '-400px';
+  // } else {
+  //   header.classList.add('fixed');
+  //   header.style.top = '0px';
+  // }
+  if (e === 't') {
     header.classList.add('fixed');
+    header.style.top = '-400px';
+    header.classList.remove('show'); // hide
   } else {
-    header.classList.remove('fixed');
+    header.classList.add('fixed');
+    header.style.top = '0px';
+    header.classList.add('show'); // show with fade
   }
 };
 
